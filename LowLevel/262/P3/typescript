@@ -1,0 +1,512 @@
+Script started on Sun 03 May 2020 11:33:44 PM EDT
+[?1034hbash-4.2$ make clean
+rm RadixSort_msouvann_203
+bash-4.2$ uname -a
+Linux zeus-2 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+bash-4.2$ pwd
+/home/msouvann/cs262/Project3_msouvann_203
+bash-4.2$ pwduname -amake cleanvim Lab10_msouvann_203.c[C[C[C[C[C[C[C[C[C[Cls[Kcd Lab10_msouvann_203[C[C[C[C[C[C[C[C[C[Cls[Kcd cs262vim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c\[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c\[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[C[6Pcd cs262ls[Kcd Lab10_msouvann_203[C[C[C[C[C[C[C[C[C[Cls[Kvim Lab10_msouvann_203.c[C[C[C[C[C[C[C[C[C[C[14Pmake clean[2Puname -a[5Ppwd[Kvalgrind --leak-check=yes [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmake
+gcc -Wall -g -std=c89 -D_XOPEN_SOURCE=600 -pedantic-errors -o RadixSort_msouvann_203 RadixSort_msouvann_203.c -lm
+bash-4.2$ make[1Ppwduname -amake cleanvim Lab10_msouvann_203.c[C[C[C[C[C[C[C[C[C[Cls[Kcd Lab10_msouvann_203[C[C[C[C[C[C[C[C[C[Cls[Kcd cs262vim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c\[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c\[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kvim project3.c[C[C[C[C[C[C[C[C[C[Cmake[Kproject3 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[8Pvim project3.c[C[C[C[C[C[C[C[C[C[C[6Pcd cs262ls[Kcd Lab10_msouvann_203[C[C[C[C[C[C[C[C[C[Cls[Kvim Lab10_msouvann_203.c[C[C[C[C[C[C[C[C[C[C[14Pmake clean[2Puname -a[5Ppwdmake[Kvalgrind --leak-check=yes RadixSr[Kort_msouvann_203.c[K[K 5 10 11 60000
+==7142== Memcheck, a memory error detector
+==7142== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==7142== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==7142== Command: RadixSort_msouvann_203 5 10 11 60000
+==7142== 
+10036
+25406
+1001
+52723
+52147
+4153
+32361
+31190
+57434
+54412
+==7142== Conditional jump or move depends on uninitialised value(s)
+==7142==    at 0x400F24: printList (RadixSort_msouvann_203.c:219)
+==7142==    by 0x4009E1: main (RadixSort_msouvann_203.c:52)
+==7142== 
+
+Bucket0:
+31190
+==7142== Conditional jump or move depends on uninitialised value(s)
+==7142==    at 0x400F24: printList (RadixSort_msouvann_203.c:219)
+==7142==    by 0x400DE9: printRadArr (RadixSort_msouvann_203.c:179)
+==7142==    by 0x400A16: main (RadixSort_msouvann_203.c:58)
+==7142== 
+
+Bucket1:
+1001
+32361
+
+Bucket2:
+54412
+
+Bucket3:
+52723
+4153
+
+Bucket4:
+57434
+
+Bucket5:
+
+Bucket6:
+10036
+25406
+
+Bucket7:
+52147
+
+Bucket8:
+
+Bucket9:
+
+==7142== Conditional jump or move depends on uninitialised value(s)
+==7142==    at 0x400EC5: walkList (RadixSort_msouvann_203.c:205)
+==7142==    by 0x400E4E: stitch (RadixSort_msouvann_203.c:192)
+==7142==    by 0x400A22: main (RadixSort_msouvann_203.c:59)
+==7142== 
+S0:
+31190
+1001
+32361
+54412
+52723
+4153
+57434
+10036
+25406
+52147
+==7142== Conditional jump or move depends on uninitialised value(s)
+==7142==    at 0x400F24: printList (RadixSort_msouvann_203.c:219)
+==7142==    by 0x400A49: main (RadixSort_msouvann_203.c:61)
+==7142== 
+
+Bucket0:
+1001
+25406
+
+Bucket1:
+54412
+
+Bucket2:
+52723
+
+Bucket3:
+57434
+10036
+
+Bucket4:
+52147
+
+Bucket5:
+4153
+
+Bucket6:
+32361
+
+Bucket7:
+
+Bucket8:
+
+Bucket9:
+31190
+
+S1:
+1001
+25406
+54412
+52723
+57434
+10036
+52147
+4153
+32361
+31190
+
+Bucket0:
+1001
+10036
+
+Bucket1:
+52147
+4153
+31190
+
+Bucket2:
+
+Bucket3:
+32361
+
+Bucket4:
+25406
+54412
+57434
+
+Bucket5:
+
+Bucket6:
+
+Bucket7:
+52723
+
+Bucket8:
+
+Bucket9:
+
+S2:
+1001
+10036
+52147
+4153
+31190
+32361
+25406
+54412
+57434
+52723
+
+Bucket0:
+10036
+
+Bucket1:
+1001
+31190
+
+Bucket2:
+52147
+32361
+52723
+
+Bucket3:
+
+Bucket4:
+4153
+54412
+
+Bucket5:
+25406
+
+Bucket6:
+
+Bucket7:
+57434
+
+Bucket8:
+
+Bucket9:
+
+S3:
+10036
+1001
+31190
+52147
+32361
+52723
+4153
+54412
+25406
+57434
+
+Bucket0:
+1001
+4153
+
+Bucket1:
+10036
+
+Bucket2:
+25406
+
+Bucket3:
+31190
+32361
+
+Bucket4:
+
+Bucket5:
+52147
+52723
+54412
+57434
+
+Bucket6:
+
+Bucket7:
+
+Bucket8:
+
+Bucket9:
+
+S4:
+1001
+4153
+10036
+25406
+31190
+32361
+52147
+52723
+54412
+57434
+==7142== Conditional jump or move depends on uninitialised value(s)
+==7142==    at 0x400BFE: deleteList (RadixSort_msouvann_203.c:120)
+==7142==    by 0x400A80: main (RadixSort_msouvann_203.c:65)
+==7142== 
+==7142== 
+==7142== HEAP SUMMARY:
+==7142==     in use at exit: 2,640 bytes in 165 blocks
+==7142==   total heap usage: 177 allocs, 12 frees, 2,976 bytes allocated
+==7142== 
+==7142== 160 bytes in 10 blocks are definitely lost in loss record 2 of 8
+==7142==    at 0x4C29EA3: malloc (vg_replace_malloc.c:309)
+==7142==    by 0x400F57: newList (RadixSort_msouvann_203.c:235)
+==7142==    by 0x400C77: initializeRad (RadixSort_msouvann_203.c:143)
+==7142==    by 0x4009BD: main (RadixSort_msouvann_203.c:50)
+==7142== 
+==7142== 176 (16 direct, 160 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 8
+==7142==    at 0x4C29EA3: malloc (vg_replace_malloc.c:309)
+==7142==    by 0x400F57: newList (RadixSort_msouvann_203.c:235)
+==7142==    by 0x400900: main (RadixSort_msouvann_203.c:36)
+==7142== 
+==7142== 704 (64 direct, 640 indirect) bytes in 4 blocks are definitely lost in loss record 6 of 8
+==7142==    at 0x4C29EA3: malloc (vg_replace_malloc.c:309)
+==7142==    by 0x400F57: newList (RadixSort_msouvann_203.c:235)
+==7142==    by 0x400E17: stitch (RadixSort_msouvann_203.c:188)
+==7142==    by 0x400A22: main (RadixSort_msouvann_203.c:59)
+==7142== 
+==7142== 800 (496 direct, 304 indirect) bytes in 31 blocks are definitely lost in loss record 7 of 8
+==7142==    at 0x4C29EA3: malloc (vg_replace_malloc.c:309)
+==7142==    by 0x400AFE: insertNode (RadixSort_msouvann_203.c:86)
+==7142==    by 0x400D47: radix (RadixSort_msouvann_203.c:161)
+==7142==    by 0x400A00: main (RadixSort_msouvann_203.c:56)
+==7142== 
+==7142== 800 bytes in 50 blocks are definitely lost in loss record 8 of 8
+==7142==    at 0x4C29EA3: malloc (vg_replace_malloc.c:309)
+==7142==    by 0x400F57: newList (RadixSort_msouvann_203.c:235)
+==7142==    by 0x400C77: initializeRad (RadixSort_msouvann_203.c:143)
+==7142==    by 0x400A55: main (RadixSort_msouvann_203.c:62)
+==7142== 
+==7142== LEAK SUMMARY:
+==7142==    definitely lost: 1,536 bytes in 96 blocks
+==7142==    indirectly lost: 1,104 bytes in 69 blocks
+==7142==      possibly lost: 0 bytes in 0 blocks
+==7142==    still reachable: 0 bytes in 0 blocks
+==7142==         suppressed: 0 bytes in 0 blocks
+==7142== 
+==7142== For counts of detected and suppressed errors, rerun with: -v
+==7142== Use --track-origins=yes to see where uninitialised values come from
+==7142== ERROR SUMMARY: 112 errors from 10 contexts (suppressed: 0 from 0)
+bash-4.2$ valgrind --leak-check=yes RadixSort_msouvann_203 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[Kvalgrind --leak-check=yes RadixSort_msouvann_203 5 10 11 60000[C[C[C[C[C[C[C[C[C[Cmake[K[1Ppwdmakevalgrind --leak-check=yes RadixSort_msouvann_203 5 10 11 60000[C[C[C[C[C[C[C[C[C[C[Kvalgrind --leak-check=yes RadixSort_msouvann_203 5 10 11 60000[C[C[K[K[K[K[K[K[K[K2 565
+==7288== Memcheck, a memory error detector
+==7288== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==7288== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==7288== Command: RadixSort_msouvann_203 5 10 2 565
+==7288== 
+561
+247
+536
+302
+82
+378
+310
+347
+11
+75
+==7288== Conditional jump or move depends on uninitialised value(s)
+==7288==    at 0x400F24: printList (RadixSort_msouvann_203.c:219)
+==7288==    by 0x4009E1: main (RadixSort_msouvann_203.c:52)
+==7288== 
+
+Bucket0:
+310
+==7288== Conditional jump or move depends on uninitialised value(s)
+==7288==    at 0x400F24: printList (RadixSort_msouvann_203.c:219)
+==7288==    by 0x400DE9: printRadArr (RadixSort_msouvann_203.c:179)
+==7288==    by 0x400A16: main (RadixSort_msouvann_203.c:58)
+==7288== 
+
+Bucket1:
+561
+11
+
+Bucket2:
+302
+82
+
+Bucket3:
+
+Bucket4:
+
+Bucket5:
+75
+
+Bucket6:
+536
+
+Bucket7:
+247
+347
+
+Bucket8:
+378
+
+Bucket9:
+
+==7288== Conditional jump or move depends on uninitialised value(s)
+==7288==    at 0x400EC5: walkList (RadixSort_msouvann_203.c:205)
+==7288==    by 0x400E4E: stitch (RadixSort_msouvann_203.c:192)
+==7288==    by 0x400A22: main (RadixSort_msouvann_203.c:59)
+==7288== 
+S0:
+310
+561
+11
+302
+82
+75
+536
+247
+347
+378
+==7288== Conditional jump or move depends on uninitialised value(s)
+==7288==    at 0x400F24: printList (RadixSort_msouvann_203.c:219)
+==7288==    by 0x400A49: main (RadixSort_msouvann_203.c:61)
+==7288== 
+
+Bucket0:
+302
+
+Bucket1:
+310
+11
+
+Bucket2:
+
+Bucket3:
+536
+
+Bucket4:
+247
+347
+
+Bucket5:
+
+Bucket6:
+561
+
+Bucket7:
+75
+378
+
+Bucket8:
+82
+
+Bucket9:
+
+S1:
+302
+310
+11
+536
+247
+347
+561
+75
+378
+82
+
+Bucket0:
+11
+75
+82
+
+Bucket1:
+
+Bucket2:
+247
+
+Bucket3:
+302
+310
+347
+378
+
+Bucket4:
+
+Bucket5:
+536
+561
+
+Bucket6:
+
+Bucket7:
+
+Bucket8:
+
+Bucket9:
+
+S2:
+11
+75
+82
+247
+302
+310
+347
+378
+536
+561
+==7288== Conditional jump or move depends on uninitialised value(s)
+==7288==    at 0x400BFE: deleteList (RadixSort_msouvann_203.c:120)
+==7288==    by 0x400A80: main (RadixSort_msouvann_203.c:65)
+==7288== 
+==7288== 
+==7288== HEAP SUMMARY:
+==7288==     in use at exit: 1,648 bytes in 103 blocks
+==7288==   total heap usage: 115 allocs, 12 frees, 1,984 bytes allocated
+==7288== 
+==7288== 160 bytes in 10 blocks are definitely lost in loss record 2 of 8
+==7288==    at 0x4C29EA3: malloc (vg_replace_malloc.c:309)
+==7288==    by 0x400F57: newList (RadixSort_msouvann_203.c:235)
+==7288==    by 0x400C77: initializeRad (RadixSort_msouvann_203.c:143)
+==7288==    by 0x4009BD: main (RadixSort_msouvann_203.c:50)
+==7288== 
+==7288== 176 (16 direct, 160 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 8
+==7288==    at 0x4C29EA3: malloc (vg_replace_malloc.c:309)
+==7288==    by 0x400F57: newList (RadixSort_msouvann_203.c:235)
+==7288==    by 0x400900: main (RadixSort_msouvann_203.c:36)
+==7288== 
+==7288== 352 (32 direct, 320 indirect) bytes in 2 blocks are definitely lost in loss record 6 of 8
+==7288==    at 0x4C29EA3: malloc (vg_replace_malloc.c:309)
+==7288==    by 0x400F57: newList (RadixSort_msouvann_203.c:235)
+==7288==    by 0x400E17: stitch (RadixSort_msouvann_203.c:188)
+==7288==    by 0x400A22: main (RadixSort_msouvann_203.c:59)
+==7288== 
+==7288== 480 (288 direct, 192 indirect) bytes in 18 blocks are definitely lost in loss record 7 of 8
+==7288==    at 0x4C29EA3: malloc (vg_replace_malloc.c:309)
+==7288==    by 0x400AFE: insertNode (RadixSort_msouvann_203.c:86)
+==7288==    by 0x400D47: radix (RadixSort_msouvann_203.c:161)
+==7288==    by 0x400A00: main (RadixSort_msouvann_203.c:56)
+==7288== 
+==7288== 480 bytes in 30 blocks are definitely lost in loss record 8 of 8
+==7288==    at 0x4C29EA3: malloc (vg_replace_malloc.c:309)
+==7288==    by 0x400F57: newList (RadixSort_msouvann_203.c:235)
+==7288==    by 0x400C77: initializeRad (RadixSort_msouvann_203.c:143)
+==7288==    by 0x400A55: main (RadixSort_msouvann_203.c:62)
+==7288== 
+==7288== LEAK SUMMARY:
+==7288==    definitely lost: 976 bytes in 61 blocks
+==7288==    indirectly lost: 672 bytes in 42 blocks
+==7288==      possibly lost: 0 bytes in 0 blocks
+==7288==    still reachable: 0 bytes in 0 blocks
+==7288==         suppressed: 0 bytes in 0 blocks
+==7288== 
+==7288== For counts of detected and suppressed errors, rerun with: -v
+==7288== Use --track-origins=yes to see where uninitialised values come from
+==7288== ERROR SUMMARY: 70 errors from 10 contexts (suppressed: 0 from 0)
+bash-4.2$ valgrind --leak-check=yes RadixSort_msouvann_203 5 10 2 565[C[C[C[C[C[C[C[C[C[C[Kexit
+
+Script done on Sun 03 May 2020 11:40:08 PM EDT
