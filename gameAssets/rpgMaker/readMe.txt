@@ -1,1 +1,1 @@
-
+Assets made for RPGMaker
