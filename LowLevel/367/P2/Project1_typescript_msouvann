@@ -1,0 +1,468 @@
+Script started on Sun 01 Mar 2020 03:35:21 PM EST
+[?1034hbash-4.2$ uname -a
+Linux zeus-2 3.10.0-1062.4.1.el7.x86_64 #1 SMP Fri Oct 18 17:15:30 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+bash-4.2$ pwd
+/home/msouvann/cs262/Project1
+bash-4.2$ ls -l
+total 12
+-rw-r--r--. 1 msouvann itestudent  446 Mar  1 15:29 Makefile
+-rw-r--r--. 1 msouvann itestudent 7760 Mar  1 15:28 Project1_msouvann.c
+-rw-r--r--. 1 msouvann itestudent    0 Mar  1 15:35 Project1_typescript_msouvann
+bash-4.2$ cat Project1_msouvann.c
+/* Matthew Souvannaphandhu G01187346
+ *  CS 262, Lab Section 203
+ *  Project 1
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#define NUM_SPACES 24
+#define NUM_GOOSE_SPACES 3
+#define NUM_BRIDGE_SPACES 1
+#define NUM_MAZE_SPACES 2
+#define NUM_SKULL_SPACES 1
+
+const int skullSpaces[NUM_SKULL_SPACES] = {23};
+const int gooseSpaces[NUM_GOOSE_SPACES] = {7, 11, 15};
+const int bridgeSpaces[NUM_BRIDGE_SPACES] = {6};
+const int mazeSpaces[NUM_MAZE_SPACES] = {13, 20};
+
+
+int checkG(int i, const int spaces[]) /*checks to see if i is in the array*/
+{
+	int *p = (int *) spaces;
+	int j = 0;
+	int psize = sizeof(p) / sizeof(int);
+	for (j = 0; j <= psize; j++)
+	{	
+		if (i == *p)
+		{
+		return 1;
+		}
+		else
+		{
+		p++;
+		}	
+	}
+	return 0;
+}
+
+
+void printB2(int p1, int p2) /*prints the board, second version of printB*/
+{
+	int i = 1;
+	for (i = 1; i <= NUM_SPACES; i++)
+	{
+		if (checkG(i, gooseSpaces))
+		{
+			fprintf(stdout, "+");
+		} 
+		else if (checkG(i, mazeSpaces))
+		{
+			fprintf(stdout, "-");
+		}	
+		else if (checkG(i, bridgeSpaces))
+		{
+			fprintf(stdout, "*");
+		}
+		else if (checkG(i, skullSpaces))
+		{
+			fprintf(stdout, "!");
+		}
+
+		if (i== p1) /*checks if player 1 is there first*/
+		{
+			fprintf(stdout, "[$");
+			if (i == p2) 
+			{
+				fprintf(stdout, "%] ");
+			} 
+			else 
+				fprintf(stdout, "] ");
+		}
+		else if (i == p2)
+		{
+			fprintf(stdout, "[%] ");
+		}
+		else
+		{
+			if (i == NUM_SPACES)
+			{
+				fprintf(stdout, "<%d> ", i);	
+			}
+			else
+				fprintf(stdout, "[%d] ", i);
+		}
+
+		if (i == NUM_SPACES/2)
+		{
+		fprintf(stdout, "\n");
+		}	
+	}
+	fprintf(stdout, "\n");
+}
+/*void printB(int p1, int p2)  first version of printB prints board in 2 vertical rows, not used here
+{
+	int i = 1;
+	for (i = 1; i <= 12; i++) 
+	{
+		int j = i+ 12;
+
+		if (i == 6) 
+		{
+			fprintf(stdout, "*");
+		}
+		else if (i == 7 || i == 11)
+		{
+			fprintf(stdout, "+");
+		}
+		
+		if (i== p1)
+		{
+			fprintf(stdout, "[$");
+			if (i == p2) 
+			{
+				fprintf(stdout, "%]	   ");
+			} 
+			else fprintf(stdout, "]	    ");
+		}
+		else if (i == p2)
+		{
+			fprintf(stdout, "[%]	   ");
+		}
+		else
+		{
+			fprintf(stdout, "[%d]	  ", i);
+		}
+
+		if (j == 15) 
+		{
+			fprintf(stdout, "+");
+		}
+		else if (j == 13 || j == 20)
+		{
+			fprintf(stdout, "-");
+		}
+		else if (j == 23) 
+		{
+		fprintf(stdout, "!"); 
+		}
+	
+		if (j == 24) 
+		{	
+			fprintf(stdout,"<%d>\n", j);
+			break;
+		}
+		if (j== p1)
+		{
+			fprintf(stdout, "[$");
+			if (j == p2) 
+			{
+				fprintf(stdout, "%]	   ");
+			} 
+			else fprintf(stdout, "]	    ");
+		}
+		else if (j == p2)
+		{
+			fprintf(stdout, "[%]	   ");
+		}
+		else
+		{
+			fprintf(stdout, "[%d]	  ", j);
+		}
+
+		fprintf(stdout, "\n");
+	}
+		
+}
+*/
+
+void rPrompt() /*prompts for a dice roll*/
+{
+	fprintf(stdout, "press <enter> to roll the dice.\n");
+	while( getchar() != '\n' );
+	
+}
+
+void ePrompt() /*end game prompt*/
+{
+	fprintf(stdout, "Press <enter> to return to the main menu.\n");
+	while(getchar() != '\n');
+}
+
+int roll() /*rolls 2 dice and returns the sum*/
+{
+	int d1 = 0;
+	int d2 = 0;
+	int sum = 0;
+	d1 = (random() % 6) + 1;
+	d2 = (random() % 6) + 1;
+	sum = d1+d2;
+	fprintf(stdout, "You rolled a %d and a %d. Combined that makes a %d\n", d1, d2, sum);	
+	return sum;
+}
+
+void menu1(char * input) /*prints the main menu and scans input*/
+{
+	char input_str[100];
+	fprintf(stdout, "Press 'P' or 'p' to play\nPress 'Q' or 'q' to quit\n");
+	
+	if (fgets(input_str, sizeof(input_str), stdin) == 0)
+	{
+		fprintf(stderr, "Error returned from fgets()...\n");
+		exit(1);
+	}
+	if (sscanf(input_str, "%c", input) != 1)
+	{
+		fprintf(stderr, "Error scanning character value from input_str...\n");
+		exit(1);
+	}
+	
+}
+
+void menuCheck(char * input) /*checks menu input*/
+{
+	int i = 0;
+	while (i == 0) 
+	{
+		switch(*input)
+		{
+			case 'P':
+			case 'p':
+			{	
+				i = 1;
+				break;
+			}
+			case 'Q':
+			case 'q':
+			{
+				exit(1);
+			}
+			default:
+			{
+				fprintf(stderr, "Invalid value. Try again.\n");
+				menu1(input);
+			}
+		}
+	}
+}
+
+
+void printBO(int orderT, int p1, int p2) /*prints the board in the right player order*/
+{
+	if (!orderT)
+	{
+	printB2(p2, p1);
+	}
+	else 
+	{
+	printB2(p1, p2);
+	}
+}
+
+int order(int * s1, int * s2) /*determines who will go first by comparing dice rolls*/
+{
+	fprintf(stdout, "Human player, ");
+	rPrompt();
+	*s1 = roll();	
+	fprintf(stdout, "Computer player, ");
+	rPrompt();
+	*s2 = roll();
+	fprintf(stdout, "H : %d  | C : %d\n",*s1, *s2);	
+	if (*s1 == *s2)
+	{
+		order(s1, s2);
+	}
+	if (*s1 > *s2) 
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+	
+}
+
+int special(int * p1, int * s1, int l1) /*checks to see if player is on a special space and takes appropriate action*/
+{
+	int s = 0;
+	int last = 0;
+	switch(*p1)
+	{
+	case 7:
+	case 11:
+	case 5:
+		*p1 += *s1;
+		fprintf(stdout, "You hit a goose. Go to space %d\n", *p1);
+		s = 1;
+		break;
+	case 6:
+		*p1 = 12;
+		fprintf(stdout, "You hit a bridge. Go to space %d\n", *p1);
+		s = 1;
+		break;
+	case 13:
+	case 20:
+		*p1 = l1;
+		fprintf(stdout, "You hit a maze. Go back to space %d\n", *p1);
+		break;
+	case 23:
+		*p1 = 1;
+		fprintf(stdout, "You hit a skull. Go back to the beginning.\n");
+		break;
+	case 24:
+		return s;
+	default:
+		fprintf(stdout, "\n");
+	}
+
+	if (*p1 > 24)
+	{
+		int back = 0;
+		last = 24 - l1;
+		back = *s1 - last;
+		fprintf(stdout, "You landed past 24, so you must move %d spaces back from 24.\n", back);
+		*p1 = 24 - back;
+		fprintf(stdout, "Go to space %d\n", *p1);
+		s = 1;
+	}
+
+	if (s==1) 
+	{
+		return special(p1, s1, l1);
+	}
+	else return s;
+	
+	
+}
+
+void turn(int orderT, int * p1, int p2, int * s1, int l1, char *pos) /*runs through a player's turn*/
+{
+	fprintf(stdout, "%s's turn, space %d, ", pos, *p1);
+	rPrompt(); 
+	*s1 = roll();
+	l1 = *p1; /*sets current position as last position before it changes*/
+	*p1 += *s1;
+	fprintf(stdout, "Go to space %d.\n", *p1);
+	special(p1, s1, l1); /*evaluates special cases and rules at the space landed on*/
+	if (won(p1))
+	{
+		fprintf(stdout, "-GAME OVER- %s won!\n", pos);
+	}
+}
+
+int won(int *p1) /*returns 0 if player is not on space 24 and 1 if they are*/
+{
+	if (*p1 == 24)
+	{
+		return 1;
+	}
+	else 
+	{
+		return 0;
+	}
+}
+
+int main() 
+{
+	char *human = "Human player"; /*string for type of player*/
+	char *com = "Computer player";
+	char *st; /*first*/
+	char *nd; /*second*/
+	int p1 = 1; /*player 1 value*/
+	int p2 = 1; /*player 2 value*/
+	int s1 = 0; /*sum of player 1 dice roll*/
+	int s2 = 0; /*sum of player 2 dice roll*/
+	int l1 = 1; /*last position P1*/
+	int l2 = 1; /*last position P2*/
+	int orderT = -1; /*tells who goes first*/
+	int seed = 0; /*rng seed*/
+	int done = 0; /*tells if game is done*/
+	int q = 0; /*tells if player has quit or not*/
+	char input_str[100];
+	char input;
+	
+	fprintf(stdout, "Enter a random number seed: "); /*setting up RNG*/
+	if (fgets(input_str, sizeof(input_str), stdin) == 0)
+	{
+		fprintf(stderr, "Error returned from fgets()...\n");
+		exit(1);
+	}
+	if (sscanf(input_str, "%d", &seed) != 1)
+	{
+		fprintf(stderr, "Error scanning integer value from input_str...\n");
+		exit(1);
+	}
+	srandom(seed);
+
+	fprintf(stdout, "Welcome to the game of goose, please select an option:\n");
+	
+	while(q==0) 
+	{
+		menu1(&input);
+		menuCheck(&input);
+		orderT = order(&s1,&s2);	/*this followed by the conditionals tells who goes first*/
+		if (orderT == 1) 
+		{
+			st = human;
+			nd = com;
+			fprintf(stdout, "%s goes first.\n", st);
+		}
+		else if (orderT == 0)
+		{
+			st = com;
+			nd = human;
+			fprintf(stdout, "%s goes first.\n", st);
+		}
+		else
+		{
+			fprintf(stderr, "Error in order function.\n");
+			exit(1);
+		}
+
+		while(done ==0) /*loop where actual game happens*/
+		{
+			printBO(orderT, p1, p2);
+			turn(orderT, &p1, p2, &s1, l1, st);
+			if (won(&p1))
+			{
+				break;
+			}
+			printBO(orderT, p1, p2);
+			turn(orderT, &p2, p1, &s2, l2, nd);
+			done = won(&p2);
+		}
+		ePrompt(); /*prompt to press enter after game is done*/
+
+	}
+	return 1;
+
+}
+
+bash-4.2$ make clean
+rm Project1_msouvann
+rm: cannot remove ‘Project1_msouvann’: No such file or directory
+make: *** [clean] Error 1
+bash-4.2$ make[K[K[K[Kls
+Makefile  Project1_msouvann.c  Project1_typescript_msouvann
+bash-4.2$ make
+gcc -Wall -g -std=c89 -D_XOPEN_SOURCE=600 -pedantic-errors -o Project1_msouvann Project1_msouvann.c
+[01m[KProject1_msouvann.c:[m[K In function ‘[01m[KprintB2[m[K’:
+[01m[KProject1_msouvann.c:69:5:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[K][m[K’ in format [-Wformat=]
+     fprintf(stdout, "%] ");
+[01;32m[K     ^[m[K
+[01m[KProject1_msouvann.c:76:4:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[K][m[K’ in format [-Wformat=]
+    fprintf(stdout, "[%] ");
+[01;32m[K    ^[m[K
+[01m[KProject1_msouvann.c:[m[K In function ‘[01m[Kturn[m[K’:
+[01m[KProject1_msouvann.c:340:2:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kwon[m[K’ [-Wimplicit-function-declaration]
+  if (won(p1))
+[01;32m[K  ^[m[K
+bash-4.2$ ls
+Makefile  Project1_msouvann  Project1_msouvann.c  Project1_typescript_msouvann
+bash-4.2$ exit
+
+Script done on Sun 01 Mar 2020 03:36:58 PM EST
